@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andredina.fireweather.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:drawableStart="@drawable/ic_place"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Dublin" />
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCity"
+        app:srcCompat="@drawable/ic_not_available"
+        tools:srcCompat="@drawable/ic_02d" />
+
+    <TextView
+        android:id="@+id/txtCondition"
+        style="@style/numbersStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toBottomOf="@+id/txtTemp"
+        tools:text="Few clouds" />
+
+    <TextView
+        android:id="@+id/txtTemp"
+        style="@style/numbersStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgIcon"
+        app:layout_constraintTop_toTopOf="@+id/imgIcon"
+        tools:text="9ºC" />
+
+    <TextView
+        android:id="@+id/txtTempMin"
+        style="@style/numbersStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/ic_min"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtTempMax"
+        app:layout_constraintTop_toBottomOf="@+id/txtCondition"
+        tools:text="10ºC" />
+
+    <TextView
+        android:id="@+id/txtTempMax"
+        style="@style/numbersStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_max"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtTempMin"
+        app:layout_constraintEnd_toEndOf="@+id/txtCondition"
+        tools:text="99ºC" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgIcon">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/wind"
+                app:srcCompat="@drawable/ic_raindrop" />
+
+            <TextView
+                android:id="@+id/txtHumidity"
+                style="@style/numbersStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                tools:text="100%" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/sunrise"
+                app:srcCompat="@drawable/ic_sunrise" />
+
+            <TextView
+                android:id="@+id/txtSunrise"
+                style="@style/numbersStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                tools:text="7:00pm" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/wind"
+                app:srcCompat="@drawable/ic_wind" />
+
+            <TextView
+                android:id="@+id/txtWind"
+                style="@style/numbersStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                tools:text="100m/S" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/sunset"
+                app:srcCompat="@drawable/ic_sunset" />
+
+            <TextView
+                android:id="@+id/txtSunset"
+                style="@style/numbersStyle"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                tools:layout_editor_absoluteX="217dp"
+                tools:layout_editor_absoluteY="347dp"
+                tools:text="7:00pm" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

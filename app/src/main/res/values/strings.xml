@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FireWeather</string>
+
+    <string name="icon_url">https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/%1$s.png</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>℉
+    <string name="temp_unit">%1$d˚C</string>
+    <string name="speed_unit">%1$dm/s</string>
+</resources>
